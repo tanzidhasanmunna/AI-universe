@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Hub</title>
+    <!-- Daisy UI and tailwind CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <main class="container mx-auto mt-4">
+      <div class="text-center">
+        <h2 class="text-3xl font-extrabold text-center">AI Universe Hub</h2>
+        <button class="btn bg-orange-500 text-white my-3">Sort By Date</button>
+      </div>
+      <div
+        id="ai-item-container"
+        class="card-container grid grid-cols-3 gap-3"
+      ></div>
+      <div class="text-center mt-4">
+        <button
+          id="show-more"
+          onclick="showButton()"
+          class="btn bg-orange-500 text-white my-3 hidden"
+        >
+          Show All
+        </button>
+      </div>
+    </main>
+    <section>
+      <!-- You can open the modal using ID.showModal() method -->
+      <dialog id="my_modal_ai" class="modal">
+        <div class="modal-box w-11/12 max-w-5xl">
+          <form method="dialog">
+            <button
+              class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
+            >
+              ✕
+            </button>
+          </form>
+          <div class="flex gap-3">
+            <div
+            id="text-details"
+              class="border-orange-400 rounded-lg bg-orange-100 p-8 w-[487px] h-[511px]"
+            >
+              <h3 class="font-bold">
+                ChatGPT is an AI-powered chatbot platform that uses OpenAI's GPT
+                technology to simulate human conversation.
+              </h3>
+              <div class="flex gap-5 mt-5">
+              </div>
+              <div class="flex justify-between mt-4">
+                <div>
+                  <h2 class="text-xl font-bold">Features</h2>
+                  <ul class="list-disc">
+
+                  </ul>
+                </div>
+                <div>
+                  <h2 class="text-xl font-bold">Integration</h2>
+                  <ul class="list-disc">
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div id="image-greeting" class="w-[487px] h-[511px] shadow-xl px-5 pt-4">
+              <figure class="rounded-lg my-4">
+                <img
+                  src="https://d3g5ywftkpzr0e.cloudfront.net/wp-content/uploads/2023/07/13220529/Artificial-Intelligence-in-Indonesia-The-current-state-and-its-opportunities.jpeg"
+                  alt="Not Found"
+                  class="rounded-xl"
+                />
+              </figure>
+              <h2 class="text-xl font-bold text-center">Hi, how are you doing today?</h2>
+              <p class="text-center">I'm doing well, thank you for asking. How can I assist you today?</p>
+            </div>
+          </div>
+        </div>
+      </dialog>
+    </section>
+    <script src="JS/script.js"></script>
+  </body>
+</html>
